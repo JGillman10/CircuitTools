@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resistor Divider</title>
+
+    <script>
+        function getV() {
+            document.getElementById("vout").innerHTML = "123"
+
+        }
+
+
+
+    </script>
+
 </head>
 <body>
     <h1>Resistor Divider</h1>
@@ -24,6 +35,14 @@
     <div id = "input_R2">
         <input type="number" id="r2" name="r2_input">
         <label for="r2">&#8486 (R1)</label>
+    </div>
+    <div id="output_voltage">
+        <input type="number" id="vout" name="voltage_output" readonly="readonly">
+        <label for="vout">V (Vout)</label>
+    </div>
+    <div id="calculate_button">
+        <button type="button" onclick="getV()">Calculate</button>
+
     </div>
 
 </body>
