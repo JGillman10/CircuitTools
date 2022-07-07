@@ -8,9 +8,9 @@
 
     <script>
         function getV() {
-            let r1 = document.getElementById("r1").value
-            let r2 = document.getElementById("r2").value
-            let vin = document.getElementById("vin").value
+            let r1 = eval(document.getElementById("r1").value)
+            let r2 = eval(document.getElementById("r2").value)
+            let vin = eval(document.getElementById("vin").value)
 
             let vout = vin * (r2 / (r1 + r2))
 
