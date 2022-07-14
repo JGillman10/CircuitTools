@@ -5,9 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallel Resistors</title>
+
+    <script>
+        function getRes() {
+            let r1 = eval(document.getElementById("r1").value)
+            let r2 = eval(document.getElementById("r2").value)
+
+            let resout = (1 / r1) + (1 / r2)
+            resout = 1 / resout
+
+            document.getElementById("resout").value = resout
+
+        }
+
+    </script>
+
 </head>
 <body>
     <h1>Parallel Resistors</h1>
     <a href="./index.html">Main Menu</a>
+
+    <div id="input_R1">
+        <input type="number" id="r1" name="r1_input">
+        <label for="r1">&#8486 (R1)</label>
+    </div>
+    <div id = "input_R2">
+        <input type="number" id="r2" name="r2_input">
+        <label for="r2">&#8486 (R2)</label>
+    </div>
+    <div id="output_resistance">
+        <input type="number" id="resout" name="resistor_output" readonly="readonly">
+        <label for="resout">&#8486 (Rout)</label>
+    </div>
+    <div id="calculate_button">
+        <button type="button" onclick="getRes()">Calculate</button>
+
+    </div>
 </body>
 </html>
