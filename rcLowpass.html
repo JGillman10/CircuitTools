@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive RC Filter Cutoff Frequency</title>
+
+    <script>
+        function getFreq() {
+            let r = eval(document.getElementById("r").value)
+            let c = eval(document.getElementById("c").value)
+
+            let freq = 1 / (2 * Math.PI * r * c)
+
+
+            document.getElementById("cutoff").value = freq
+
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    <h1>Passive RC Filter Cutoff Frequency</h1>
+    <a href="./index.html">Main Menu</a>
+
+    <div id="picture">
+        <img src="./rclowpass.png">
+    </div>
+    <div id="input_r">
+        <input type="number" id="r" name="r_input">
+        <label for="r">&#8486 (R1)</label>
+    </div>
+    <div id = "input_c">
+        <input type="number" id="c" name="c_input">
+        <label for="c">F (R2)</label>
+    </div>
+    <div id="cutoff_freq">
+        <input type="number" id="cutoff" name="freq_cutoff" readonly="readonly">
+        <label for="cutoff">Hz</label>
+    </div>
+    <div id="calculate_button">
+        <button type="button" onclick="getFreq()">Calculate</button>
+    </div>
+
+</body>
+</html>
